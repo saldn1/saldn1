@@ -1,0 +1,35 @@
+{
+	"version": "2.0.0",
+	"tasks": [
+		{
+			"type": "npm",
+			"script": "lint",
+			"path": "openzeppelin-contracts-master",
+			"problemMatcher": [],
+			"label": "npm: lint - openzeppelin-contracts-master",
+			"detail": "npm run lint:js && npm run lint:sol",
+			"group": "build"
+		},
+		{
+			"type": "npm",
+			"script": "compile",
+			"path": "openzeppelin-contracts-master",
+			"group": "build",
+			"problemMatcher": [],
+			"label": "npm: compile - openzeppelin-contracts-master",
+			"detail": "hardhat compile"
+		},
+		{
+			"type": "npm",
+			"script": "prepare-docs",
+			"path": "openzeppelin-contracts-master/contracts",
+			"problemMatcher": [],
+			"label": "npm: prepare-docs - openzeppelin-contracts-master/contracts",
+			"detail": "cd ..; npm run prepare-docs",
+			"group": {
+				"kind": "build",
+				"isDefault": true
+			}
+		}
+	]
+}
